@@ -7,6 +7,9 @@ target 'Yelp' do
 
   # Pods for Yelp
     pod 'AlamofireImage', '~> 3.3'
+    pod 'AFNetworking', '~> 2.5'
+    pod 'BDBOAuth1Manager'
+    
   target 'YelpTests' do
     inherit! :search_paths
     # Pods for testing
