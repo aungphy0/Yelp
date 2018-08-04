@@ -1,14 +1,14 @@
-# Project 3 - *Name of App Here*
+# Project 3 - *Yelp*
 
 **Name of your app** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api).
 
-Time spent: **X** hours spent in total
+Time spent: 3 hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-- [ ] Table rows for search results should be dynamic height according to the content height. (3pt)
+- [x] Table rows for search results should be dynamic height according to the content height. (3pt)
 - [ ] Custom cells should have the proper Auto Layout constraints. (+5pt)
 - [ ] Search bar should be in the navigation bar (doesn't have to expand to show location like the real Yelp app does). (+2pt)
 
@@ -31,7 +31,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/iK6arEX.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
