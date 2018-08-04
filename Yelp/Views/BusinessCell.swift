@@ -32,7 +32,7 @@ class BusinessCell: UITableViewCell {
             smallPhotoView.setImageWith(business.imageURL!)
             typeOfFood.text = business.categories
             addressLabel.text = business.address
-            numberOfReview.text = "\(business.reviewCount!)Reviews"
+            numberOfReview.text = "\(business.reviewCount!) Reviews"
             mileLabel.text = business.distance
             ratingImage.image = business.ratingImage
         }
