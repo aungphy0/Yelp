@@ -12,8 +12,10 @@ class BusinessCell: UITableViewCell {
 
     @IBOutlet weak var smallPhotoView: UIImageView!
     
-    @IBOutlet weak var ratingImage: UIImageView!
     
+    @IBOutlet weak var ratingImageView: UIImageView!
+    
+  
     @IBOutlet weak var businessTitle: UILabel!
     
     @IBOutlet weak var numberOfReview: UILabel!
@@ -34,7 +36,8 @@ class BusinessCell: UITableViewCell {
             addressLabel.text = business.address
             numberOfReview.text = "\(business.reviewCount!) Reviews"
             mileLabel.text = business.distance
-            ratingImage.image = business.ratingImage
+            ratingImageView.image = business.ratingImage
+            
         }
     }
     
@@ -42,6 +45,16 @@ class BusinessCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        smallPhotoView.layer.cornerRadius = 3
+        smallPhotoView.clipsToBounds = true
+        
+        businessTitle.preferredMaxLayoutWidth = businessTitle.frame.size.width
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        businessTitle.preferredMaxLayoutWidth = businessTitle.frame.size.width
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

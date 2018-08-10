@@ -9,8 +9,11 @@
 import UIKit
 
 class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+   
+    
     
     var businesses: [Business]!
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,8 +22,10 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
 
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 130
-        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        //tableView.estimatedRowHeight = 120
+    
+        //tableView.rowHeight = 120
         Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
             self.businesses = businesses
@@ -44,7 +49,10 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
          print(business.address!)
          }
          }
-         */    }
+         */
+      
+        
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if businesses != nil{
@@ -60,6 +68,8 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         
         return cell
     }
+    
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
