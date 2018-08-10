@@ -8,18 +8,23 @@
 
 import UIKit
 
-class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,UISearchBarDelegate {
    
     
     
+ 
     var businesses: [Business]!
+    var searchController: UISearchController!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        searchBar.delegate = self
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -50,8 +55,18 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
          }
          }
          */
-      
         
+        
+         searchBar.sizeToFit()
+        
+         navigationItem.titleView = searchBar
+        
+         searchController = UISearchController(searchResultsController: nil)
+        
+        searchController.searchBar.sizeToFit()
+        navigationItem.titleView = searchController.searchBar
+        
+        searchController.hidesNavigationBarDuringPresentation = false
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -23,9 +23,14 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="nxC-P8-xeh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="139" id="WNZ-wD-lO4" customClass="BusinessCell" customModule="Yelp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="139"/>
+                                        <rect key="frame" x="0.0" y="72" width="375" height="139"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WNZ-wD-lO4" id="BQr-ro-55U">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
@@ -47,7 +52,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hSM-3q-qzH">
-                                                    <rect key="frame" x="101" y="38" width="85" height="32"/>
+                                                    <rect key="frame" x="101" y="37" width="85" height="34"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="King Of Thai Noodles" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq7-Ny-0kU">
                                                     <rect key="frame" x="102" y="9" width="181.5" height="21.5"/>
@@ -120,8 +125,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XWm-JD-417"/>
+                    <navigationItem key="navigationItem" id="XWm-JD-417" userLabel="Yelp"/>
                     <connections>
+                        <outlet property="searchBar" destination="nxC-P8-xeh" id="1cc-0h-GhM"/>
                         <outlet property="tableView" destination="jzV-ak-tDL" id="RM5-SW-QSX"/>
                     </connections>
                 </viewController>
